@@ -1,3 +1,4 @@
+import styles from './ImageModal.module.css';
 import type { ApiImage } from '../../types';
 
 type Props = {

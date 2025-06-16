@@ -1,5 +1,10 @@
-const API_KEY = 'rGEYlzYsQCd3aojwSTVw88n5302as3KtfpihGZ0iOkE';
-const BASE_URL = 'https://api.unsplash.com/search/photos';
+
+
+import axios from 'axios';
+import type { ApiImage } from '../types';
+
+const API_KEY = '49353739-de52a4a64f2d40a4c6a535a2b';
+const BASE_URL = 'https://pixabay.com/api/';
 
 export const fetchImages = async (
   query: string,

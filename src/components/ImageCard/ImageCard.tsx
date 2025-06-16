@@ -1,3 +1,4 @@
+import styles from './ImageCard.module.css';
 import type { ApiImage } from '../../types';
 
 type Props = {
