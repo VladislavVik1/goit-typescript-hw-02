@@ -26,11 +26,22 @@ export const App = () => {
 
   return (
     <div>
-      <SearchBar onSearch={setQuery} />
+      <SearchBar
+        onSearch={(value) => {
+          setQuery(value);
+          setPage(1);
+          setImages([]);
+        }}
+      />
       <ImageGallery images={images} onImageClick={setSelectedImage} />
       {loading && <Loader />}
-      {!loading && images.length > 0 && <LoadMoreBtn onClick={() => setPage(p => p + 1)} />}
-      {selectedImage && <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} />}
+      {!loading && images.length > 0 && (
+        <LoadMoreBtn onClick={() => setPage(p => p + 1)} />
+      )}
+      {selectedImage && (
+        <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} />
+      )}
     </div>
   );
+  
 };
